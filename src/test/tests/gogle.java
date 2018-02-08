@@ -20,7 +20,9 @@ public class gogle {
     @Test
     public void Google() {
         wd.get("https://www.google.com.ua/");
-        wd.findElement(By.id("lga")).click();
+        wd.findElement(By.id("lst-ib")).click();
+        wd.findElement(By.id("lst-ib")).clear();
+        wd.findElement(By.id("lst-ib")).sendKeys("qwerty");
     }
 
     @AfterMethod
